@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gaussian Distribution Simulation</title>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Gaussian (Normal) Distribution Simulation</h1>
+        
+        <div class="controls">
+            <div class="control-group">
+                <label for="numberOfBalls">Number of Balls:</label>
+                <input type="range" id="numberOfBalls" min="1" max="10000" value="5000">
+                <span id="numberOfBallsValue">5000</span>
+            </div>
+            
+            <div class="control-group">
+                <label for="ballSpeed">Ball Speed:</label>
+                <input type="range" id="ballSpeed" min="1" max="20" value="10">
+                <span id="ballSpeedValue">10</span>
+            </div>
+            
+            <div class="control-group">
+                <label for="numberOfPegs">Number of Peg Rows:</label>
+                <input type="range" id="numberOfPegs" min="1" max="25" value="15">
+                <span id="numberOfPegsValue">15</span>
+            </div>
+            
+            <div class="control-group">
+                <label for="numberOfBuckets">Number of Buckets:</label>
+                <input type="range" id="numberOfBuckets" min="5" max="50" value="25">
+                <span id="numberOfBucketsValue">25</span>
+            </div>
+            
+            <button id="resetBtn">Reset Simulation</button>
+            <button id="startBtn">Start Simulation</button>
+        </div>
+        
+        <div class="simulation-container">
+            <svg id="simulation"></svg>
+        </div>
+        
+        <div class="instructions">
+            <h3>About this Simulation</h3>
+            <p>This simulation demonstrates how the Gaussian (normal) distribution emerges naturally when random processes are stacked.</p>
+            <p>Balls fall from the top and hit pegs. Each time a ball hits a peg, it has a 50% chance to go left or right.</p>
+            <p>After many balls, the distribution of balls in buckets approximates the bell curve of a normal distribution.</p>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html> 
